@@ -1,0 +1,60 @@
+
+$mobileDesign: 750;
+$imageURL:"//www1.pcauto.com.cn/pcauto/assets/images/seckill/202009/";
+
+@function vw($px) {
+    @return $px / $mobileDesign * 100vw;
+}
+
+@mixin clearfix {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+@mixin flexStart {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+@mixin flexEnd {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+@mixin flexBetween {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flexColumn {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+@mixin bgCenter {
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@mixin fixedTop {
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+@mixin  bg($url, $pos, $size, $repeat) {
+    background-image: url($url);
+    background-position: $pos;
+    background-repeat: $repeat;
+    background-size: $size;
+}

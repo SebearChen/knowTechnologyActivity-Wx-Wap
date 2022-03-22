@@ -1,0 +1,231 @@
+html, body, div, ul, li, span, p, h1, h2, h3, h4, h5, h6, a, button, dd, dt, dl {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    list-style-type:none;
+}
+html, body {
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+}
+div {
+    -webkit-overflow-scrolling: touch;
+    user-select: none;
+    &.contact-map-box {
+        * {
+            transition: none;
+        }
+    }
+}
+img {
+    width: 100%;
+    vertical-align: bottom;
+    content: normal !important;
+}
+input {
+    outline: none;  
+    border: none;
+}
+.on-select {
+    user-select: none;
+}
+div::-webkit-scrollbar {
+    width: 2px;
+    height: 1px;
+}
+div::-webkit-scrollbar-thumb {
+    border-radius: 0;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    background: #535353;
+}
+div::-webkit-scrollbar-track {
+    border-radius: 0;
+}
+.scroll-none::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+.scroll-none::-webkit-scrollbar-thumb {
+    border-radius: 0;
+    box-shadow: inset 0 0 0 rgba(0,0,0,0.2);
+    background: #535353;
+}
+.scroll-none::-webkit-scrollbar-track {
+    border-radius: 0;
+}
+#app {
+    width: 100%;
+}
+.safe-bottom {
+    margin-bottom: VW(108) !important;
+}
+.transition {
+    transition: all 0.3s;
+}
+.postion-abs {
+    position: absolute;
+}
+.router-fade-enter-active,
+.router-fade-leave-active {
+  transition: opacity 0.15s;
+}
+.router-fade-enter,
+.router-fade-leave-active {
+  opacity: 0;
+}
+.side-bar {
+    position: relative;
+    z-index: 99;
+}
+.floor {
+    margin-top: vw(-40);
+    min-height: vw(750);
+    background-image: url(https://www1.pcauto.com.cn/pcauto/assets/images/seckill/202009/title-bg.png), url(https://www1.pcauto.com.cn/pcauto/assets/images/seckill/202009/img8.png);
+    background-size: 100% vw(200), 100% vw(551);
+    background-position: top, bottom;
+    background-repeat: no-repeat, no-repeat;
+    position: relative;
+    padding-bottom: vw(186);
+    position: relative;
+    z-index: 99;
+}
+.nav {
+    position: relative;
+    z-index: 70;
+}
+.content-title {
+    border-top: 1px solid transparent;
+    @include flexStart;
+    padding: vw(75) vw(50) 0 vw(10);
+    margin-bottom: vw(40);
+    overflow: visible;
+    .title-floor {
+        min-width: vw(185);
+        min-height: vw(132);
+        margin-right: vw(10);
+        transform: translateY(vw(20));
+        position: relative;
+        z-index: 99;
+        img {
+            width: vw(185);
+            height: vw(132);
+        }
+    }
+}
+.floor1 {
+    z-index: 60;
+    .title-txt {
+        img {
+            width: vw(494);
+            height: vw(73);
+        }
+    }
+}
+.floor2 {
+    z-index: 50;
+    .content-title {
+        padding-right: vw(20);
+        .title-floor {
+            transform: translateY(0);
+        }
+        .title-txt {
+            img {
+                width: vw(274);
+                height: vw(73);
+            }
+        }
+        .title-opt {
+            @include flexBetween;
+            min-width: vw(230);
+            margin-left: vw(20);
+            img {
+                width: vw(110);
+                height: vw(110);
+            }
+        }
+    }
+}
+.floor3 {
+    z-index: 40;
+}
+.floor4 {
+    z-index: 30;
+}
+.floor5 {
+    z-index: 20;
+}
+.btn-style1 {
+    background: linear-gradient(135deg, #feb856, #ed3223);
+    border-radius: vw(6);
+    font-size: vw(24);
+    color: #ffffff;
+    box-shadow: -1px -1px 1px #4e1a83;
+    display: block;
+    line-height: vw(35);
+    text-align: center;
+}
+.confirm-btn {
+    display: block;
+    width: vw(350);
+    max-width: 100%;
+    height: vw(70);
+    font-size: vw(28);
+    color: #ffffff;
+    border-radius: vw(70);
+    margin: vw(20) auto 0;
+    background: linear-gradient(left, #fddc6a, #ef5b23);
+}
+.tow-ellipsis {
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+
+// animations
+@keyframes haertBit {
+    0% {
+        transform: scale(0.8);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.8);
+    }
+}
+@keyframes bobFloat {
+    0% {
+        transform: translateY(vw(-15));
+    }
+    25% {
+        transform: translateY(vw(0));
+    }
+    50% {
+        transform: translateY(vw(15));
+    }
+    75% {
+        transform: translateY(vw(0));
+    }
+    100% {
+        transform: translateY(vw(-15));
+    }
+}
+@keyframes crash {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    50% {
+        transform: rotateZ(45deg);
+    }
+    100% {
+        transform: rotateZ(-15deg);
+    }
+}
+
